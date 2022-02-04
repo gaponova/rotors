@@ -1,0 +1,33 @@
+// Шрифты
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@700&family=Lato:wght@400;700&display=swap');
+
+// Обнуление
+@import "_zero";
+
+// Переменные
+$f: #fff;
+$red: #EA001E;
+//Миксин
+
+@mixin font($ff, $fz, $lh, $fw, $c) {
+  font-family: $ff;
+  font-size: $fz;
+  line-height: $lh;
+  font-weight: $fw;
+  color: $c;
+}
+
+body {
+  font: 16px/1.4 'Lato', sans-serif;
+  background: #000;
+}
+
+.wrapper {
+  height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
