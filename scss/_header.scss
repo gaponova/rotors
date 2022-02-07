@@ -273,3 +273,15 @@
     margin-left: 0;
   }
 }
+
+@media screen and (max-width: 330px) {
+
+  .header__logo {
+    width: 28px;
+  }
+
+  .action {
+    margin: 0;
+    padding: 0;
+  }
+}
