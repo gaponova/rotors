@@ -19,6 +19,7 @@ $red: #EA001E;
 
 body {
   font: 16px/1.4 'Lato', sans-serif;
+  color: #fff;
   background: #000;
 }
 
@@ -31,3 +32,13 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
+
+.content {
+
+  &__text {
+    color: #333;
+  }
+}
+
+
+@import "_header";
