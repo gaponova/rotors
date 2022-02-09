@@ -573,6 +573,12 @@ body {
   }
 }
 
+@media screen and (max-width: 1366px) {
+  .hero__container {
+    background-position: right -140px center;
+  }
+}
+
 @media screen and (max-width: 1170px) {
   .hero {
     background: none;
