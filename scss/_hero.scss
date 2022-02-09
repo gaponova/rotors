@@ -1,0 +1,177 @@
+.hero {
+  height: 100vh;
+  background: url(../img/bg.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 300px 0 150px;
+
+  &__container {
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+    background: url('../img/car.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    // background-size: contain;
+  }
+
+  &__row {}
+
+  &__info {}
+
+  &__text {}
+
+  &__title {
+    @include font ('Goldman', 10rem, 120%, 700, $red);
+  }
+
+  &__subtitle {
+    max-width: 700px;
+    @include font ('Lato', 5.4rem, 120%, 500, $f);
+    margin-bottom: 40px;
+  }
+
+  &__actions {
+    margin-bottom: 60px;
+  }
+
+  &__btn {
+    margin-right: 20px;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  @include font('Goldman', 13px, 100%, 700, $f);
+  min-width: 230px;
+  min-height: 60px;
+  background: $red;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  border-radius: 4px;
+  transition: 0.3s;
+
+  @media(any-hover: hover) {
+    &:hover {
+      background: rgba(234, 0, 30, 0.7);
+    }
+  }
+
+  &_full {
+    background: $red;
+    margin-bottom: 20px;
+  }
+
+  &_transparent {
+    color: $red;
+    border: 2px solid $red;
+    background: transparent;
+
+    @media(any-hover: hover) {
+      &:hover {
+        color: $f;
+        background: $red;
+      }
+    }
+  }
+}
+
+.pages {
+  display: flex;
+  text-align: center;
+
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  &__count {
+    display: block;
+    @include font ('Lato', 4.8rem, 100%, 600, $f);
+    margin-bottom: 15px;
+  }
+
+  &__info {
+    display: block;
+    @include font ('Lato', 1.5rem, 140%, 400, $f);
+    letter-spacing: 2px;
+  }
+}
+
+.content__title {
+  color: #080808;
+  text-align: center;
+}
+
+@media screen and (max-width: 1700px) {
+  .hero__container {
+    background-position: right -130px center;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+
+  .hero {
+    padding-top: 200px;
+  }
+
+  .hero__container {
+    background-position: right -250px center;
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  .hero {
+    background: none;
+  }
+
+  .hero__container {
+    background: url('../img/car-transparent.png');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .hero__info {
+    text-align: center;
+  }
+
+  .hero__subtitle {
+    margin: 0 auto 40px;
+  }
+
+  .pages {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero {
+    padding-top: 120px;
+  }
+
+  .hero__subtitle {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+
+  .hero__subtitle {
+    font-size: 2rem;
+  }
+
+  .pages__item:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  .pages__count {
+    font-size: 3rem;
+  }
+
+  .pages__info {
+    letter-spacing: 0;
+  }
+}

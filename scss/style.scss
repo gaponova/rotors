@@ -24,7 +24,7 @@ body {
 }
 
 .wrapper {
-  height: 100vh;
+  height: 100%;
 }
 
 .container {
@@ -34,11 +34,43 @@ body {
 }
 
 .content {
+  padding: 200px 0;
+
+  &__title {
+    color: #333;
+  }
 
   &__text {
     color: #333;
   }
 }
 
+.title {
+  @include font ('Goldman', 10rem, 120%, 700, $red);
+}
+
 
 @import "_header";
+@import "_hero";
+
+@media screen and (max-width: 767px) {
+  .title {
+    font-size: 8rem;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .title {
+    font-size: 6rem;
+  }
+
+  .content {
+    padding: 100px 0;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .title {
+    font-size: 5rem;
+  }
+}

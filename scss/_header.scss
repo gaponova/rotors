@@ -28,7 +28,7 @@
 
   &__logo {
     position: relative;
-    padding-right: 10px;
+    padding-right: 87px;
     z-index: 5;
   }
 
@@ -87,9 +87,9 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    @include font('Goldman', 15px, 100%, 700, $f);
-    width: 230px;
-    height: 60px;
+    @include font('Goldman', 13px, 100%, 700, $f);
+    min-width: 230px;
+    min-height: 60px;
     background: $red;
     text-transform: uppercase;
     border-radius: 4px;
@@ -149,7 +149,18 @@
 
 
 //Адаптив
+
+@media screen and (max-width: 1030px) {
+  .header__logo {
+    padding-right: 10px;
+  }
+}
+
 @media screen and (max-width: 991px) {
+
+  body.lock {
+    overflow: hidden;
+  }
 
   .header {
     padding: 10px 0;
@@ -162,7 +173,7 @@
     width: 100%;
     height: 100%;
     background: #121212;
-    padding: 80px 10px 20px;
+    padding: 150px 10px 20px;
     overflow: auto;
     z-index: 2;
     transition: 0.5s;
@@ -259,7 +270,7 @@
   }
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 490px) {
   .header__logo {
     width: 35px;
     overflow: hidden;
@@ -274,7 +285,7 @@
   }
 }
 
-@media screen and (max-width: 330px) {
+@media screen and (max-width: 360px) {
 
   .header__logo {
     width: 28px;
