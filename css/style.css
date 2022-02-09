@@ -575,7 +575,11 @@ body {
 
 @media screen and (max-width: 1366px) {
   .hero__container {
-    background-position: right -140px center;
+    background-position: right -100px center;
+  }
+  .hero__subtitle {
+    max-width: 550px;
+    font-size: 4rem;
   }
 }
 
@@ -604,9 +608,6 @@ body {
 @media screen and (max-width: 767px) {
   .hero {
     padding-top: 120px;
-  }
-  .hero__subtitle {
-    font-size: 4rem;
   }
 }
 
