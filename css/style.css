@@ -300,6 +300,28 @@ body {
   }
 }
 
+#toTop {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  display: none;
+  background: #EA001E;
+  font-size: 22px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+#toTop:focus,
+#toTop:active {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 @media screen and (max-width: 1030px) {
   .header__logo {
     padding-right: 10px;
@@ -345,8 +367,10 @@ body {
     margin-right: 20px;
   }
   .action__link {
+    min-width: 0;
+    min-height: 0;
     width: 200px;
-    height: 40px;
+    height: 50px;
   }
   .header__burger {
     position: relative;
